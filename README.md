@@ -33,6 +33,7 @@ Once it's running:
 |---|---|
 | [`http://127.0.0.1:8000/dev/listen`](http://127.0.0.1:8000/dev/listen) | speak or stream a WAV → live captions → the avatar signs each one |
 | [`http://127.0.0.1:8000/dev/compose`](http://127.0.0.1:8000/dev/compose) | type text → sign preview, confidence, repair prompts |
+| [`http://127.0.0.1:8000/app/#/live`](http://127.0.0.1:8000/app/#/live) | full web app, Live stage — build it first: `cd app/web && npm install && npm run build`, then restart the backend |
 
 Or drive it from the terminal without a browser at all:
 
@@ -64,5 +65,4 @@ Copy `.env.example` to `.env` and tweak as needed. The settings that matter most
 Audio is decoded in memory and dropped right after recognition — nothing is written to
 disk (`backend/tests/test_privacy.py` checks this). Trace files only keep timings and IDs
 unless you turn on `SETU_STORE_TRANSCRIPTS`.
-
 
